@@ -6,6 +6,8 @@ A full stack web app made with Node, Express, SQLite, and JavaScript.
 
 Deployed [live on Glitch](https://calorie-queen.glitch.me/)!
 
+&nbsp;
+
 ![preview image](https://raw.githubusercontent.com/madelinecodes/Calorie-Queen/master/calorie-queen-example-dashboard.png "Image of Dashboard")
 
 &nbsp;
