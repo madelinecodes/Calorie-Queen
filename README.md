@@ -1,5 +1,4 @@
 # Calorie Queen 👸
-=================
 
 Count and track your calories by adding food items and a calories goal.
 
