@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Calorie Queen</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+      <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Sacramento&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/background.css">
+      <link rel="stylesheet" href="/style.css">
+      <!--     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   </head>
+   <body class="container">
+      <header>
+         <h1>
+            Calorie Queen
+         </h1>
+      </header>
+      <main class="center-column">
+         <div class="topBar">
+            <h2 id="welcome">Welcome! </h2>
+            <div id="dateSlider">
+               <button id="leftBtn" class="directionBtn button is-primary is-rounded" onclick="move(-1)"> <i class="fas fa-arrow-left"></i> </button>
+               <div>
+                  <p id="date" class="bold">DATE</p>
+               </div>
+               <button id="rightBtn" class=" directionBtn button is-primary is-rounded" onclick="move(1)"> <i class="fas fa-arrow-right"></i> </button>
+            </div>
+            <div id="progressBar">
+               <span id="start">0</span>
+               <progress class="progress is-success" id="progress" value="0" max="100"></progress>
+               <span id="end"></span>
+               <span id="changeGoal">            
+               <button class="button is-small" onclick="changeGoal()">
+               Change Goal
+               </button>
+               </span>
+            </div>
+         </div>
+         <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+               <form id="addForm" onsubmit="addMeal(event)" onreset="closeModal()">
+                  <div class="field">
+                     <p class="control has-icons-left has-icons-right">
+                        <input id="mealName" class="input is-large" type="text" placeholder="Food Name">
+                        <span class="icon is-large is-left">
+                        <i class="fas fa-utensils"></i>
+                        </span>
+                     </p>
+                  </div>
+                  <div class="field">
+                     <p class="control has-icons-left">
+                        <input id="calories" class="input is-large" type="number" placeholder="Calories">
+                        <span class="icon is-large is-left">
+                        <i class="fas fa-weight"></i>
+                        </span>
+                     </p>
+                  </div>
+                  <div class="field">
+                     <p class="control">
+                        <button id="addMealBtn" class="button is-success" value="submit">
+                        Save
+                        </button>
+                     </p>
+                  </div>
+               </form>
+            </div>
+            <button class="modal-close is-large" aria-label="close" onclick="modalClose()"></button>
+         </div>
+         <ul id="list-foods">
+         </ul>
+        <div>
+          <p class="totals"> Total:
+            <span id="totalCals"> 0 </span>
+         </p>
+         <button id="showForm" class="button is-primary" onclick="showForm()">
+            
+            <p><i class="fas fa-plus"></i>&nbsp;&nbsp;Add Food</p>
+            
+         </button>
+        </div>
+         
+         <div id="snackbar">Saved Update</div>
+      </main>
+      <script src="/dashboard.js" defer></script>
+   </body>
+</html>
